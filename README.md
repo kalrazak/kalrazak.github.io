@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Haikal - GitHub Pages Site
 
-## Getting Started
+This is a Next.js project configured for GitHub Pages deployment.
 
-First, run the development server:
+## Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Option 1: Manual Deployment
+```bash
+npm run deploy
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Option 2: Automatic Deployment (Recommended)
+1. Push your code to the `main` branch
+2. GitHub Actions will automatically build and deploy to GitHub Pages
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+Before deploying, make sure to:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Update the basePath** in `next.config.ts`:
+   - Replace `'your-repo-name'` with your actual GitHub repository name
+   - For example: if your repo is `https://github.com/username/my-site`, use `'/my-site'`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Enable GitHub Pages** in your repository settings:
+   - Go to Settings > Pages
+   - Source: Deploy from a branch
+   - Branch: `gh-pages` (will be created automatically)
+   - Folder: `/ (root)`
 
-## Deploy on Vercel
+3. **Enable GitHub Actions**:
+   - Go to Settings > Actions > General
+   - Ensure "Allow all actions and reusable workflows" is selected
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/` - Next.js app directory
+- `src/components/` - React components
+- `public/` - Static assets
+- `.github/workflows/` - GitHub Actions workflows
+
+## Technologies
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- GitHub Pages
