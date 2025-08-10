@@ -1,8 +1,15 @@
 // @ts-nocheck
 const useFluidCursor = () => {
+    console.log('useFluidCursor hook called');
     const canvas = document.getElementById('fluid');
-    resizeCanvas();
-  
+    
+    if (!canvas) {
+      console.error('Canvas element not found');
+      return;
+    }
+    
+    console.log('Canvas found:', canvas);
+    
     //try to adjust settings
   
     let config = {
@@ -41,6 +48,11 @@ const useFluidCursor = () => {
   
     const { gl, ext } = getWebGLContext(canvas);
   
+    if (!gl) {
+      console.error('WebGL not supported');
+      return;
+    }
+  
     if (!ext.supportLinearFiltering) {
       config.DYE_RESOLUTION = 256;
       config.SHADING = false;
@@ -61,6 +73,11 @@ const useFluidCursor = () => {
         gl =
           canvas.getContext('webgl', params) ||
           canvas.getContext('experimental-webgl', params);
+      
+      if (!gl) {
+        console.error('Failed to create WebGL context');
+        return { gl: null, ext: null };
+      }
   
       let halfFloat;
       let supportLinearFiltering;
@@ -72,7 +89,7 @@ const useFluidCursor = () => {
         supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
       }
   
-      gl.clearColor(0.0, 0.0, 0.0, 1.0);
+      gl.clearColor(0.0, 0.0, 0.0, 0.0);
   
       const halfFloatTexType = isWebGL2
         ? gl.HALF_FLOAT
