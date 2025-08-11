@@ -23,10 +23,12 @@ const FluidCursor = () => {
   }, []);
 
   return (
-    <div className='fixed top-0 left-0 w-full h-full z-[1] pointer-events-none'>
+    <div className='fixed top-0 left-0 w-full h-full z-[50] pointer-events-none'>
       <canvas 
         id='fluid' 
         className='w-full h-full block pointer-events-none'
+        width={typeof window !== 'undefined' ? window.innerWidth : 800}
+        height={typeof window !== 'undefined' ? window.innerHeight : 600}
         style={{
           position: 'absolute',
           top: 0,
