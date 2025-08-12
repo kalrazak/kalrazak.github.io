@@ -5,7 +5,7 @@ import { GithubButton } from './ui/github-button';
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-51 bg-white/80 backdrop-blur-md border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
         {/* Logo/Brand */}
         <Link href="/" className="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
