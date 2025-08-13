@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="font-sans min-h-screen p-8 pb-20 sm:p-20 bg-white relative flex items-center justify-center">
+      <div className="font-sans min-h-screen p-8 pb-20 sm:p-20 bg-white relative flex items-center justify-center pt-24 sm:pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl w-full z-50">
           {/* Left Section - Text and Button */}
           <div className="space-y-6">
