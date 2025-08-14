@@ -14,13 +14,12 @@ export default function Home() {
           <div className="rounded-2xl p-8 bg-transparent backdrop-blur-md border border-gray-300/50 shadow-lg transition-all duration-300 ease-out transform hover:scale-[1.02] hover:shadow-xl hover:bg-gray-100/50">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-4xl font-bold text-gray-600">
-                Hello !
+                Welcome !
               </h1>
-              <h2 className="text-5xl lg:text-4xl font-bold text-gray-600">
-                I'm Haikal !
-              </h2>
               <p className="text-lg text-gray-600 max-w-md">
-                Attention ! This page is all GLASSY.
+                Hi!  
+                You’ve entered Haikal’s glassy space.  
+                Smooth, shiny, and stylish.
               </p>
               <button className="bg-transparent hover:bg-gray-100/50 backdrop-blur-md border border-gray-300/50 text-black hover:text-black font-semibold py-4 px-8 rounded-lg transition-all duration-300 ease-out transform hover:scale-105 hover:-rotate-1 active:scale-95 shadow-lg hover:shadow-xl hover:shadow-2xl">
                 Get started
