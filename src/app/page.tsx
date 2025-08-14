@@ -28,10 +28,10 @@ export default function Home() {
           <div className="rounded-2xl p-8 flex items-center justify-center min-h-[400px] lg:min-h-[500px]">
             <div className="text-center">
               <Image
-                src="/pixel.png"
+                src="/memoji.png"
                 alt="Pixel Art Character"
-                width={200}
-                height={200}
+                width={400}
+                height={400}
                 className="mx-auto mb-4"
                 priority
               />
